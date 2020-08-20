@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.valign {
+  display: table;
+  width: 100%;
+  height: 100%;
+
+  .inner {
+    vertical-align: middle;
+    display: table-cell;
+
+    &.bottom {
+      vertical-align: bottom;
+    }
+  }
+}
+
+a{
+  &:hover{
+    text-decoration: none;
+  }
+}

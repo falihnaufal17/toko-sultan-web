@@ -1,0 +1,53 @@
+.search {
+    background-color: #ffffff;
+    position: relative;
+    border: 1px solid #BBB;
+    width: 100%;
+    margin-right: 7px;
+    &.mega-search{
+        margin-bottom: unset;
+        border-radius: 11px;
+    }
+
+    .prepend {
+        position: absolute;
+        z-index: 2;
+        text-align: center;
+        width: 54px;
+
+        &.mega-prepend{
+            right: 6px;
+            left: unset;
+            background-color: #E0BC1E;
+            padding: 5px 17px;
+            border-radius: 11px;
+            top: 5px;
+            bottom: 5px;
+        }
+
+        img {
+            height: 20px;
+            margin-top: -2px;
+        }
+    }
+
+    .form-control {
+        background: none;
+        border: none;
+        height: auto;
+
+        &.mega-form-control{
+            padding: 10px 26px;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        ::placeholder{
+            color: #BBB;
+            font-size: 13px;
+            line-height: 15;
+        }
+    }
+}

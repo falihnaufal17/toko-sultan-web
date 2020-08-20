@@ -1,0 +1,222 @@
+#content-home{
+    margin-top: 120px;
+}
+
+a{
+    &:hover{
+      text-decoration: none;
+    }
+}
+
+.navbar{
+    background-color: #FFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    margin-bottom: 12px;
+
+    .nav-item{
+        padding: 0 5px;
+
+        .nav-link{
+            padding: 6px 20px;
+        }
+    }
+}
+
+.btn-sultan{
+    border: unset;
+    border-radius: 8px;
+    padding: 8px 20px;
+    text-align: center;
+    transition: none;
+
+    &.btn-sultan-primary{
+        background-color: #E0BC1E;
+        color: #FFF;
+        &:hover{
+            color: #FFF;
+        }
+    }
+
+    &.btn-sultan-primary-outline{
+        background-color: #FFF;
+        color: #E0BC1E;
+        border: 1px solid #E0BC1E;
+        &:hover{
+            color: #E0BC1E;
+        }
+    }
+}
+
+.vline{
+    width: 1px;
+    height: 44.5px;
+    background-color: #BBB;
+    margin-right: 11px;
+    margin-left: 11px;
+    @media screen and (max-width: 768px){
+        display: none;
+    }
+}
+
+.slick-slider{
+    margin-bottom: 27px;
+    
+    .slick-arrow{
+        display: none !important;
+    }
+
+    .slick-slide{
+        padding: 0 20px;
+    }
+    
+    .slick-dots{
+        bottom: 10px;
+        li{
+            margin: 0;
+            &.slick-active{
+                button{
+                    &::before{
+                        background-color: #E1BD1F;
+                        opacity: 1;
+                    }
+                }
+            }
+            button{
+                width: 10px;
+                height: 10px;
+                &::before{
+                    content: '';
+                    border-radius: 50%;
+                    background-color: #C8C8C8;
+                    width: 10px;
+                    height: 10px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.title{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.link-more{
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 16px;
+    color: #527E03;
+    padding-right: 4px;
+
+    &:hover{
+        text-decoration: none;
+        color: #527E03;
+    }
+}
+
+.card{
+    &.card-paling-dicari{
+        padding: 5px 15px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+        border-radius: 13px;
+        margin-bottom: 50px;
+
+        .title{
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 15px;
+            color: #000;
+            margin-bottom: 5px;
+        }
+
+        .count{
+            @extend .title;
+            color: #9D9D9D
+        }
+    }
+
+    &.card-category{
+        @extend .card-paling-dicari;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        margin-bottom: 38px;
+
+        .title{
+            @extend .title;
+            font-size: 16px;
+            line-height: 18px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+    }
+
+    &.card-product{
+        padding: 7px;
+        border: 1px solid #BDBDBD;
+        border-radius: 7px;
+        margin-bottom: 28px;
+        padding-bottom: 25px;
+
+        @media screen and (max-width: 768px) {
+            img{
+                width: 100%;
+            }
+        }
+
+        .title{
+            color: #4C4C4C;
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 17px;
+            margin-bottom: 10px;
+        }
+
+        .price{
+            @extend .title;
+            font-weight: 400;
+            color: #527E03;
+            margin-bottom: 5px;
+            font-size: 13px;
+            line-height: 15px;
+        }
+
+        .location{
+            @extend .price;
+            color: #4C4C4C;
+            margin-bottom: 1px;
+        }
+
+        .rating-row{
+            margin: auto -3px;
+            > * {
+                padding: 0 3px;
+            }
+        }
+
+        .rating-count{
+            color: #ADADAD;
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+}
+
+#section-toko-promo{
+    margin-bottom: 7px;
+    
+    img{
+        width: 100%;
+    }
+}
+
+.row-p{
+    margin: auto -10px;
+    > * {
+        padding: 0 10px;
+        width: 20%;
+    }
+}
