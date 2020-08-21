@@ -5,11 +5,11 @@ const SectionKomunitas = ({ komunitas }) =>{
     return(
         <div id="section-komunitas">
             <h2 className="title">Komunitas</h2>
-            <div className="row">
+            <div className="row row-p">
                 {
                     komunitas.map((i, k)=>{
                         return (
-                            <div className="col-6 col-md col-lg" key={k}>
+                            <div className="col-6 col-md-6 col-lg" key={k}>
                                 <a href="#">
                                     <div className="card card-komunitas">
                                         <div className="row">

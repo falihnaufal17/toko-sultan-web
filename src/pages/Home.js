@@ -4,9 +4,9 @@ import Slider from "react-slick";
 import Navbar from '../components/Navbar';
 import banner from '../assets/images/banner web-01.png';
 import pks from '../assets/images/PKS.png';
-import mtr from '../assets/images/full-logo.png';
-import xbank from '../assets/images/icon-xbank.png';
-import lariba from '../assets/images/logo-lariba-islamic-indonesia-ok.png';
+import mtr from '../assets/images/MTR.png';
+import xbank from '../assets/images/XBank.png';
+import lariba from '../assets/images/Lariba.png';
 import tokoresmi from '../assets/images/speecial limit edisi web.png';
 import promosultan from '../assets/images/sepeda banner web-01.png';
 import mesinkopilarge from '../assets/images/product-large.png';
@@ -31,25 +31,30 @@ const Home = p =>{
             {
               breakpoint: 1024,
               settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
+                dots: false,
                 infinite: true,
-                dots: false
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: false,
+                centerMode: false,
               }
             },
             {
               breakpoint: 600,
               settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                initialSlide: 2,
                 dots: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: false,
+                centerMode: false,
               }
             },
             {
               breakpoint: 480,
               settings: {
-                dots: false,
                 infinite: true,
                 speed: 500,
                 slidesToShow: 1,
@@ -198,7 +203,9 @@ const Home = p =>{
                 </Slider>
                 <div className="container">
                     <SectionKomunitas komunitas={komunitas} />
-                    <SectionPromo tokoresmi={tokoresmi} promosultan={promosultan} />
+                    <div className="d-none d-sm-block">
+                        <SectionPromo tokoresmi={tokoresmi} promosultan={promosultan} />
+                    </div>
                     <SectionKategori kategori={kategori} />
                     <SectionRekomendasi rekomendasi={rekomendasi} />
                 </div>

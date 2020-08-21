@@ -10,7 +10,7 @@ const SectionRekomendasi = ({ rekomendasi }) => {
                 {
                     rekomendasi.map((i, k)=>{
                         return(
-                            <div className="col-6 col-md col-lg" key={k}>
+                            <div className="col-6 col-md-4 col-lg" key={k}>
                                 <ProductLists 
                                     image={i.image} 
                                     product_name={i.product_name} 
