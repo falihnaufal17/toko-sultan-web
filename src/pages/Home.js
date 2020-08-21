@@ -3,11 +3,15 @@ import Slider from "react-slick";
 
 import Navbar from '../components/Navbar';
 import banner from '../assets/images/banner web-01.png';
-import mesinkopi from '../assets/images/S009393897-1.png';
+import pks from '../assets/images/PKS.png';
+import mtr from '../assets/images/full-logo.png';
+import xbank from '../assets/images/icon-xbank.png';
+import lariba from '../assets/images/logo-lariba-islamic-indonesia-ok.png';
 import caparight from '../assets/images/capa-right.png';
 import tokoresmi from '../assets/images/speecial limit edisi web.png';
 import promosultan from '../assets/images/sepeda banner web-01.png';
 import mesinkopilarge from '../assets/images/product-large.png';
+import seemore from '../assets/images/see more.png';
 
 import '../assets/styles/home.scss';
 
@@ -56,30 +60,22 @@ const Home = p =>{
         ]
     };
     
-    const palingBanyakDicari = [
+    const komunitas = [
         {
-            image: mesinkopi,
-            product_name: 'Mesin Kopi',
-            count: 10000,
-            string_count: '10rb produk'
+            image: pks,
+            name: 'PKS'
         },
         {
-            image: mesinkopi,
-            product_name: 'Mesin Kopi',
-            count: 10000,
-            string_count: '10rb produk'
+            image: lariba,
+            name: 'Lariba Islamic Indonesia'
         },
         {
-            image: mesinkopi,
-            product_name: 'Mesin Kopi',
-            count: 10000,
-            string_count: '10rb produk'
+            image: xbank,
+            name: 'X BANK'
         },
         {
-            image: mesinkopi,
-            product_name: 'Mesin Kopi',
-            count: 10000,
-            string_count: '10rb produk'
+            image: mtr,
+            name: '#Masyarakat Tanpa Riba'
         }
     ]
 
@@ -92,7 +88,8 @@ const Home = p =>{
             price: 3500000,
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
-            rating: 20
+            rating: 20,
+            community: 'Lariba'
         },
         {
             image: mesinkopilarge,
@@ -100,7 +97,8 @@ const Home = p =>{
             price: 3500000,
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
-            rating: 20
+            rating: 20,
+            community: 'Lariba'
         },
         {
             image: mesinkopilarge,
@@ -108,7 +106,8 @@ const Home = p =>{
             price: 3500000,
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
-            rating: 20
+            rating: 20,
+            community: 'Lariba'
         },
         {
             image: mesinkopilarge,
@@ -116,7 +115,8 @@ const Home = p =>{
             price: 3500000,
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
-            rating: 20
+            rating: 20,
+            community: 'Lariba'
         },
         {
             image: mesinkopilarge,
@@ -124,7 +124,8 @@ const Home = p =>{
             price: 3500000,
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
-            rating: 20
+            rating: 20,
+            community: 'Lariba'
         },
         {
             image: mesinkopilarge,
@@ -132,7 +133,8 @@ const Home = p =>{
             price: 3500000,
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
-            rating: 20
+            rating: 20,
+            community: 'Lariba'
         },
         {
             image: mesinkopilarge,
@@ -140,7 +142,8 @@ const Home = p =>{
             price: 3500000,
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
-            rating: 20
+            rating: 20,
+            community: 'Lariba'
         },
         {
             image: mesinkopilarge,
@@ -148,7 +151,8 @@ const Home = p =>{
             price: 3500000,
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
-            rating: 20
+            rating: 20,
+            community: 'Lariba'
         },
         {
             image: mesinkopilarge,
@@ -156,7 +160,8 @@ const Home = p =>{
             price: 3500000,
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
-            rating: 20
+            rating: 20,
+            community: 'Lariba'
         },
         {
             image: mesinkopilarge,
@@ -164,7 +169,8 @@ const Home = p =>{
             price: 3500000,
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
-            rating: 20
+            rating: 20,
+            community: 'Lariba'
         },
     ]
 
@@ -190,33 +196,25 @@ const Home = p =>{
                     </div>
                 </Slider>
                 <div className="container">
-                    <div id="section-paling-banyak-dicari">
-                        <div className="row">
-                            <div className="col">
-                                <h2 className="title">Paling Banyak Dicari</h2>
-                            </div>
-                            <div className="col-auto">
-                                <div className="valign">
-                                    <div className="inner">
-                                        <a href="#" className="link-more">Lihat Lainnya <img src={caparight}/></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div id="section-komunitas">
+                        <h2 className="title">Komunitas</h2>
                         <div className="row">
                             {
-                                palingBanyakDicari.map((i, k)=>{
+                                komunitas.map((i, k)=>{
                                     return (
                                         <div className="col-6 col-md col-lg" key={k}>
                                             <a href="#">
-                                                <div className="card card-paling-dicari">
+                                                <div className="card card-komunitas">
                                                     <div className="row">
                                                         <div className="col-auto">
                                                             <img src={i.image} />
                                                         </div>
                                                         <div className="col">
-                                                            <div className="title">{i.product_name}</div>
-                                                            <div className="count">{i.string_count}</div>
+                                                            <div className="valign">
+                                                                <div className="inner">
+                                                                    <div className="title">{i.name}</div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -225,6 +223,15 @@ const Home = p =>{
                                     )
                                 })
                             }
+                        </div>
+                        <div className="text-center">
+                            <div className="valign">
+                                <div className="inner">
+                                    <a href="#" className="btn btn-seemore">
+                                        <img src={seemore} />
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -288,11 +295,21 @@ const Home = p =>{
                                                 string_price={i.string_price} 
                                                 location={i.location} 
                                                 rating={i.rating}
+                                                community={i.community}
                                             />
                                         </div>
                                     )
                                 })
                             }
+                        </div>
+                        <div className="text-center">
+                            <div className="valign">
+                                <div className="inner">
+                                    <a href="#" className="btn btn-seemore">
+                                        <img src={seemore} />
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

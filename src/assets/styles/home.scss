@@ -119,14 +119,14 @@ a{
 }
 
 .card{
-    &.card-paling-dicari{
+    &.card-komunitas{
         padding: 5px 15px;
         box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
         border-radius: 13px;
         margin-bottom: 50px;
 
         .title{
-            font-weight: 400;
+            font-weight: bold;
             font-size: 13px;
             line-height: 15px;
             color: #000;
@@ -140,7 +140,7 @@ a{
     }
 
     &.card-category{
-        @extend .card-paling-dicari;
+        @extend .card-komunitas;
         padding-top: 14px;
         padding-bottom: 14px;
         margin-bottom: 38px;
@@ -159,12 +159,16 @@ a{
         border: 1px solid #BDBDBD;
         border-radius: 7px;
         margin-bottom: 28px;
-        padding-bottom: 25px;
+        padding-bottom: 10px;
 
         @media screen and (max-width: 768px) {
             img{
                 width: 100%;
             }
+        }
+
+        .image{
+            margin-bottom: 13px;
         }
 
         .title{
@@ -187,7 +191,7 @@ a{
         .location{
             @extend .price;
             color: #4C4C4C;
-            margin-bottom: 1px;
+            margin-bottom: 5px;
         }
 
         .rating-row{
@@ -201,6 +205,22 @@ a{
             color: #ADADAD;
             font-size: 13px;
             line-height: 15px;
+        }
+
+        .badge-community{
+            position: absolute;
+            border-radius: 7px;
+            padding: 5px;
+            background-image: linear-gradient(to right, #00008C 0%, #CC1010 100%);
+            color: #FFF;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 15px;
+            text-align: center;
+            width: 82px;
+            margin-left: auto;
+            right: 8px;
+            top: 55%;
         }
     }
 }
@@ -219,4 +239,11 @@ a{
         padding: 0 10px;
         width: 20%;
     }
+}
+
+.btn-seemore{
+    border-radius: 3px;
+    border: 1px solid #527E03;
+    padding: 0px 55px;
+    margin-bottom: 46px;
 }

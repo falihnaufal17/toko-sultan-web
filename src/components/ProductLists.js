@@ -2,11 +2,14 @@ import React from 'react';
 
 import staroff from '../assets/images/star-off.png'
 
-const ProductLists = ({image, product_name, string_price, location, rating}) =>{
+const ProductLists = ({image, product_name, string_price, location, rating, community}) =>{
     return(
         <a href="#">
             <div className="card card-product">
-                <img src={image} />
+                <div className="image">
+                    <img src={image} />
+                    <div className="badge-community">{community}</div>
+                </div>
                 <div>
                     <div className="title">{product_name}</div>
                     <div className="price">{string_price}</div>
