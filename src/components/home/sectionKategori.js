@@ -4,18 +4,20 @@ import caparight from '../../assets/images/capa-right.png';
 const SectionKategori = ({kategori}) =>{
     return(
         <div id="section-kategori">
-            <div className="row">
-                <div className="col">
-                    <div className="valign">
-                        <div className="inner">
-                            <h2 className="title">Kategori</h2>
+            <div className="title-section">
+                <div className="row">
+                    <div className="col">
+                        <div className="valign">
+                            <div className="inner">
+                                <div className="title">Kategori</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="col-auto">
-                    <div className="valign">
-                        <div className="inner">
-                            <a href="#" className="link-more">Lihat Lainnya <img src={caparight} className="d-none d-sm-block"/></a>
+                    <div className="col-auto">
+                        <div className="valign">
+                            <div className="inner">
+                                <a href="#" className="link-more">Lihat Lainnya <img src={caparight} className="d-none d-sm-inline"/></a>
+                            </div>
                         </div>
                     </div>
                 </div>

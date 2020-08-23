@@ -4,7 +4,9 @@ import seemore from '../../assets/images/see more.png';
 const SectionKomunitas = ({ komunitas }) =>{
     return(
         <div id="section-komunitas">
-            <h2 className="title">Komunitas</h2>
+            <div className="title-section">
+                <h2 className="title">Komunitas</h2>
+            </div>
             <div className="row row-p">
                 {
                     komunitas.map((i, k)=>{

@@ -5,7 +5,9 @@ import ProductLists from '../../components/ProductLists';
 const SectionRekomendasi = ({ rekomendasi }) => {
     return(
         <div id="section-rekomendasi">
-            <h2 className="title">Rekomendasi</h2>
+            <div className="title-section">
+                <h2 className="title">Rekomendasi</h2>
+            </div>
             <div className="row row-p">
                 {
                     rekomendasi.map((i, k)=>{
