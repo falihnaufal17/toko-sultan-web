@@ -20,7 +20,9 @@ const Login = p =>{
     return(
         <div className="container">
             <div className="d-flex justify-content-center mb-4 mt-3">
-                <img src={Logo} />
+                <a href="/">
+                    <img src={Logo} />
+                </a>
             </div>
             <div className="d-flex justify-content-center">
                 <div className="card text-center card-login">
