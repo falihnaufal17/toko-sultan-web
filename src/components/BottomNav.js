@@ -26,7 +26,7 @@ const BottomNav = p =>{
             icon_active: CommunityIconActive
         },
         {
-            url: '/profile',
+            url: '/register',
             icon: ProfileIcon,
             icon_active: ProfileIconActive
         }

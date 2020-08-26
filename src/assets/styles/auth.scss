@@ -1,0 +1,63 @@
+.title-register{
+    font-size: 25px;
+    line-height: 28px;
+    color: #000;
+    margin-bottom: 14px;
+}
+
+.label{
+    font-size: 13px;
+    line-height: 15px;
+
+    &.text-secondary{
+        color: #527E03 !important;
+    }
+
+    &.text-info{
+        color: #A9A9A9 !important;
+    }
+}
+
+.btn-sultan-primary{
+    border-radius: 16px;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 9px 42px;
+}
+
+.hline{
+    height: 1px;
+    background-color: #808080;
+    width: 70px;
+}
+
+.btn-sultan-secondary{
+    width: 100%;
+    text-align: center;
+}
+
+.card-login{
+    width: 445px;
+    padding: 19px;
+
+    .row{
+        margin-right: unset;
+        margin-left: unset;
+
+        .col{
+            padding-left: unset;
+            padding-right: unset;
+        }
+
+        .col-auto{
+            padding-left: unset;
+            padding-right: unset;
+        }
+    }
+
+    .prepend-form{
+        position: absolute;
+        bottom: 43%;
+        right: 15%;
+    }
+}

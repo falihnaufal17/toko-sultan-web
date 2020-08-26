@@ -12,7 +12,14 @@ const Container = lazy(() => import('./pages/Container'));
 const App = props => {
 
   let bottomTab = null;
+  let navbar = null;
   let urlPath = props.location.pathname;
+
+  if(urlPath == '/register' || urlPath == '/login'){
+    navbar = (<div/>);
+  }else{
+    navbar = (<Navbar {...props} />)
+  }
 
   if(urlPath == '/' || urlPath == '/favorite' || urlPath == '/community' || urlPath == '/profile'){
     bottomTab = (<BottomNav {...props} />)
@@ -22,12 +29,10 @@ const App = props => {
 
   return (
     <Suspense fallback="">
-      <div>
-        <Navbar {...props}/>
-        <Container {...props} />
-        <div className="d-block d-sm-none">
-          {bottomTab}
-        </div>
+      {navbar}
+      <Container {...props} />
+      <div className="d-block d-sm-none">
+        {bottomTab}
       </div>
     </Suspense>
   );

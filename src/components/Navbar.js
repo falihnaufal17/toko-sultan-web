@@ -11,10 +11,10 @@ const Navbar = props =>{
     return(
         <nav className="navbar fixed-top navbar-expand-lg">
             <div className="container-fluid">
-                <a className="navbar-brand d-none d-sm-none d-md-none d-lg-block" href="#">
+                <a className="navbar-brand d-none d-sm-none d-md-none d-lg-block" href="/">
                     <img src={Logo} />
                 </a>
-                <a className="navbar-brand d-none d-sm-block d-md-block d-lg-none" href="#">
+                <a className="navbar-brand d-none d-sm-block d-md-block d-lg-none" href="/">
                     <img src={LogoMobile} />
                 </a>
                 <div className="d-flex justify-content-between align-items-center w-100 d-sm-none">
@@ -53,14 +53,14 @@ const Navbar = props =>{
                         <li className="nav-item">
                             <div className="valign">
                                 <div className="inner">
-                                    <a className="nav-link btn-sultan btn-sultan-primary" href="#">Masuk</a>
+                                    <a className="nav-link btn-sultan btn-sultan-primary" href="/login">Masuk</a>
                                 </div>
                             </div>
                         </li>
                         <li className="nav-item">
                             <div className="valign">
                                 <div className="inner">
-                                    <a className="nav-link btn-sultan btn-sultan-primary-outline" href="#">Daftar</a>
+                                    <a className="nav-link btn-sultan btn-sultan-primary-outline" href="/register">Daftar</a>
                                 </div>
                             </div>
                         </li>

@@ -90,6 +90,10 @@
         &:hover{
             color: #FFF;
         }
+
+        &.btn-shadow{
+          box-shadow: 0 10px 25px 0 #E0BC1E;
+        }
     }
 
     &.btn-sultan-primary-outline{
@@ -150,4 +154,9 @@
   @media screen and (max-width: 768px) {
     margin-top: 120px;
   }
+}
+
+.card{
+  padding: 19px 45px;
+  box-shadow: 0 2px 4px 0 #BBB;;
 }
