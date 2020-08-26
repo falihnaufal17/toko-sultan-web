@@ -6,7 +6,8 @@ import './assets/slick/slick.scss';
 import './assets/slick/slick-theme.scss';
 
 const BottomNav = lazy(() => import('./components/BottomNav'));
-const Container = lazy(() => import('./pages/Container.js'));
+const Navbar = lazy(() => import('./components/Navbar'));
+const Container = lazy(() => import('./pages/Container'));
 
 const App = props => {
 
@@ -22,6 +23,7 @@ const App = props => {
   return (
     <Suspense fallback="">
       <div>
+        <Navbar {...props}/>
         <Container {...props} />
         <div className="d-block d-sm-none">
           {bottomTab}

@@ -1,7 +1,6 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import Slider from "react-slick";
 
-import Navbar from '../components/Navbar';
 import banner from '../assets/images/banner web-01.png';
 import pks from '../assets/images/PKS.png';
 import mtr from '../assets/images/MTR.png';
@@ -13,10 +12,10 @@ import mesinkopilarge from '../assets/images/product-large.png';
 
 import '../assets/styles/home.scss';
 
-import SectionKomunitas from '../components/home/sectionKomunitas';
-import SectionPromo from '../components/home/sectionPromo';
-import SectionKategori from '../components/home/sectionKategori';
-import SectionRekomendasi from '../components/home/sectionRekomendasi';
+const SectionKomunitas = lazy(()=>import('../components/home/sectionKomunitas'));
+const SectionPromo = lazy(()=>import('../components/home/sectionPromo'));
+const SectionKategori = lazy(()=>import('../components/home/sectionKategori'));
+const SectionRekomendasi = lazy(()=>import('../components/home/sectionRekomendasi'));
 
 const Home = p =>{
     const settings = {
@@ -181,8 +180,7 @@ const Home = p =>{
     ]
 
     return (
-        <div>
-            <Navbar/>
+        <Suspense>
             <div id="content-home">
                 <Slider {...settings}>
                     <div>
@@ -210,7 +208,7 @@ const Home = p =>{
                     <SectionRekomendasi rekomendasi={rekomendasi} />
                 </div>
             </div>
-        </div>
+        </Suspense>
     )
 }
 

@@ -18,7 +18,7 @@ const Navbar = props =>{
                     <img src={LogoMobile} />
                 </a>
                 <div className="d-flex justify-content-between align-items-center w-100 d-sm-none">
-                    <a className="navbar-brand" href="#">
+                    <a className="navbar-brand" href="/">
                         <img src={LogoMobile} />
                     </a>
                     <a href="#">

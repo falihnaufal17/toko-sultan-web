@@ -1,24 +1,17 @@
-import React, {lazy, Suspense} from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React, {lazy} from 'react';
 
 const Home = lazy(()=>import('./pages/Home'));
-
-// const Routing = props => {
-//     return(
-//         <Suspense fallback={<div/>}>
-//             <Router>
-//                 <Route exact path="/" component={Home} />
-//             </Router>
-//         </Suspense>
-//     )
-// }
-
-// export default Routing;
+const NotFound = lazy(()=>import('./pages/NotFound'));
 
 export default [
     {
         path: '/',
         component: Home,
+        exact: true,
+    },
+    {
+        path: '*',
+        component: NotFound,
         exact: true,
     }
 ]
