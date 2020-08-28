@@ -154,3 +154,15 @@ input[type=tel]{
         }
     }
 }
+
+.card{
+    @media screen and (max-width: 768px) {
+        box-shadow: none !important;
+        margin-right: -15px;
+        margin-left: -15px;
+        margin-top: 0 !important;
+        border: none !important;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
