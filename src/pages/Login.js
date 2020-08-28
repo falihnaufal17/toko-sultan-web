@@ -72,7 +72,7 @@ const Login = p =>{
                             </a>
                             <small className="label text-info">Minimum 8 karakter</small>
                         </div>
-                        <button type="submit" className="btn-sultan btn-sultan-secondary">Masuk</button>
+                        <button type="submit" className="btn-sultan btn-sultan-secondary" onClick={()=>onSubmit()}>Masuk</button>
                         <small>
                             <a href="#">Lupa Password?</a>
                         </small>
