@@ -6,7 +6,7 @@ const SectionPromo = ({tokoresmi, promosultan}) => {
             <div className="row">
                 <div className="col-12 col-md-6 col-lg-6">
                     <div className="title-section">
-                        <h2 className="title">Toko Resmi</h2>
+                        <h2 className="title">Limited Edition</h2>
                     </div>
                     <a href="#">
                         <img src={tokoresmi}/>

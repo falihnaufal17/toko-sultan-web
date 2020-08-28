@@ -15,7 +15,7 @@ const App = props => {
   let navbar = null;
   let urlPath = props.location.pathname;
 
-  if(urlPath == '/register' || urlPath == '/login'){
+  if(urlPath == '/register' || urlPath == '/login' || urlPath == '/verification' || urlPath =='/register/biodata'){
     navbar = (<div/>);
   }else{
     navbar = (<Navbar {...props} />)

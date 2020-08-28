@@ -1,8 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Logo from '../assets/images/Logo.png';
 import '../assets/styles/auth.scss';
 
 const Register = p =>{
+
+    const [data, setData] = useState({
+        emailPhone: ''
+    })
+
+    const handleChange = e =>{
+        setData({emailPhone: e.target.value});
+    }
+
+    const onSubmit = () =>{
+        localStorage.setItem('isRegister', true);
+        if(data.emailPhone !== ''){
+            setData({emailPhone: '' })
+            window.location.href = '/verification'
+        }
+    }
+
     return(
         <div className="container">
             <div className="d-flex justify-content-center mb-4 mt-3">
@@ -32,13 +49,13 @@ const Register = p =>{
                         </div>
                     </div>
 
-                    <form className="text-left mb-3">
+                    <form className="text-left mb-3" onSubmit={() => onSubmit()}>
                         <div className="form-group">
                             <label className="label">Nomor Ponsel Atau Email</label>
-                            <input type="text" className="form-control"/>
+                            <input type="text" className="form-control" name="email-phone" value={data.emailPhone || ''} onChange={e => handleChange(e)} required/>
                             <small className="label text-info">Contoh: email@tokosultan.com</small>
                         </div>
-                        <button className="btn-sultan btn-sultan-secondary">Daftar</button>
+                        <button className="btn-sultan btn-sultan-secondary" onClick={() => onSubmit()}>Daftar</button>
                     </form>
 
                     <div className="label text-info">Dengan mendaftar, saya menyetujui</div>

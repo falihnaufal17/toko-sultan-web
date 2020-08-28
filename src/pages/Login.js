@@ -7,6 +7,10 @@ import '../assets/styles/auth.scss';
 const Login = p =>{
 
     const [hide, setHide] = useState(true);
+    const [data, setData] = useState({
+        emailPhone: '',
+        password: '',
+    })
 
     const displayPassword = (e) => {
         e.preventDefault()
@@ -15,6 +19,25 @@ const Login = p =>{
         }else{
             setHide(true);
         }
+    }
+    
+    const goBack = () =>{
+        p.history.goBack();
+    }
+
+    const onSubmit = () =>{
+        let {emailPhone, password} = data;
+        if(emailPhone != '' && password != ''){
+            window.location.href = '/verification'
+        }
+    }
+
+    const handleChange = e => {
+        let target = e.target;
+        let value = target.value;
+        let name = target.name;
+
+        setData({...data, [name]: value})
     }
 
     return(
@@ -28,7 +51,7 @@ const Login = p =>{
                 <div className="card text-center card-login">
                     <div className="row">
                         <div className="col-auto">
-                            <a href="/register">
+                            <a onClick={() => goBack()}>
                                 <img src={Back} />
                             </a>
                         </div>
@@ -36,15 +59,15 @@ const Login = p =>{
                             <h2 className="title-register">Silahkan Masuk</h2>
                         </div>
                     </div>
-                    <form className="text-left mb-3 card-body">
+                    <div className="text-left mb-3 card-body">
                         <div className="form-group">
                             <label className="label">Nomor Ponsel Atau Email</label>
-                            <input type="text" className="form-control" required/>
+                            <input type="text" className="form-control" value={data.emailPhone || ''} name="emailPhone" onChange={e => handleChange(e)} required/>
                         </div>
                         <div className="form-group">
                             <label className="label">Kata Sandi</label>
-                            <input type={hide ? "password" : "text"} className="form-control" required/>
-                            <a href="#" className="prepend-form" onClick={(e) => e/ displayPassword(e)}>
+                            <input type={hide ? "password" : "text"} className="form-control" value={data.password || ''} name="password" onChange={e => handleChange(e)} required/>
+                            <a href="#" className="prepend-form" onClick={(e) => displayPassword(e)}>
                                 <img src={eyeoff} />
                             </a>
                             <small className="label text-info">Minimum 8 karakter</small>
@@ -53,7 +76,7 @@ const Login = p =>{
                         <small>
                             <a href="#">Lupa Password?</a>
                         </small>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
