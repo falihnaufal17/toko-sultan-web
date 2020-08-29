@@ -6,6 +6,7 @@ const Register = lazy(()=>import('./pages/Register'));
 const Login = lazy(()=>import('./pages/Login'));
 const Verification = lazy(()=>import('./pages/Verification'));
 const Biodata = lazy(()=>import('./pages/Biodata'));
+const ChooseCommunity = lazy(()=>import('./pages/ChooseCommunity'));
 
 export default [
     {
@@ -31,6 +32,11 @@ export default [
     {
         path: '/register/biodata',
         component: Biodata,
+        exact: true,
+    },
+    {
+        path: '/register/choose-community',
+        component: ChooseCommunity,
         exact: true,
     },
     {

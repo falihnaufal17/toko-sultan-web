@@ -156,6 +156,44 @@ input[type=tel]{
 }
 
 .card{
+    &.card-choose-community{
+        width: 776px;
+
+        .btn-sultan{
+            width: 352px;
+            margin-top: 169px;
+            @media screen and (max-width: 768px) {
+                width: 100%
+            }
+        }
+
+        .slick-slide{
+            *{
+                outline:none !important;
+            }
+        }
+
+        .slick-prev, .slick-next{
+            background-color: #FFF;
+            border-radius: 100px;
+            &::before{
+                background-color: #FFF;
+                color:#E0BC1E;
+                border-radius: 100px;
+            }
+        }
+
+        .card-item{
+            border-radius: 13px;
+            background-color: #FFF;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+            padding: 5px 11px;
+            
+            > label{
+                margin-bottom: 0;
+            }
+        }
+    }
     @media screen and (max-width: 768px) {
         box-shadow: none !important;
         margin-right: -15px;

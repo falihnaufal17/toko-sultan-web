@@ -33,7 +33,7 @@ const Biodata = p =>{
         let {name, gender, password} = data.form;
         if(name != '' && gender != '' && password != ''){
             localStorage.removeItem('isRegister');
-            window.location.href = '/'
+            window.location.href = '/register/choose-community'
         }else{
             return false;
         }
