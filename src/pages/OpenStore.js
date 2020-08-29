@@ -78,15 +78,15 @@ const OpenStore = p =>{
                                 <small className="label text-info float-right">{data.store_url ? data.store_url.length:0}/16</small>
                             </div>
                             <div className="form-group">
-                                <label>Kota atau Kecamatan</label>
+                                <label className="label">Kota atau Kecamatan</label>
                                 <input type="text" className="form-control" value={data.store_domicile || ''} name="store_domicile" onChange={e => handleChange(e)} required/>
                             </div>
                             <div className="form-group">
-                                <label>Kode Pos</label>
+                                <label className="label">Kode Pos</label>
                                 <input type="number" className="form-control" value={data.store_postcode || ''} name="store_postcode" onChange={e => handleChange(e)} required/>
                             </div>
                             <div className="form-group">
-                                <label>Nomor Ponsel atau Email</label>
+                                <label className="label">Nomor Ponsel atau Email</label>
                                 <input type="text" className="form-control" value={data.store_emailPhone || ''} name="store_emailPhone" onChange={e => handleChange(e)} required/>
                             </div>
                             <div className="form-group mb-4">
