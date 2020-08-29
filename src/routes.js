@@ -7,6 +7,7 @@ const Login = lazy(()=>import('./pages/Login'));
 const Verification = lazy(()=>import('./pages/Verification'));
 const Biodata = lazy(()=>import('./pages/Biodata'));
 const ChooseCommunity = lazy(()=>import('./pages/ChooseCommunity'));
+const OpenStore = lazy(()=>import('./pages/OpenStore'));
 
 export default [
     {
@@ -37,6 +38,11 @@ export default [
     {
         path: '/register/choose-community',
         component: ChooseCommunity,
+        exact: true,
+    },
+    {
+        path: '/open-store',
+        component: OpenStore,
         exact: true,
     },
     {

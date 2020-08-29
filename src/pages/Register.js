@@ -34,7 +34,7 @@ const Register = p =>{
                     <div className="label text-info" href= "#">Buat Toko anda sendiri dengan</div>
                     
                     <div className="mb-2 mt-4">
-                        <a href="#" className="btn-sultan btn-sultan-primary btn-shadow">Buka Toko disini</a>
+                        <a href="/open-store" className="btn-sultan btn-sultan-primary btn-shadow">Buka Toko disini</a>
                     </div>
 
                     <div className="row align-items-center mb-5 mt-5">
