@@ -61,7 +61,7 @@ const OpenStore = p =>{
                                         <small className="label text-info">Nama tidak bisa diubah lagi</small>
                                     </div>
                                     <div className="col-auto">
-                                        <small className="label text-info">{data.store_name && data.store_name.length}/24</small>
+                                        <small className="label text-info">{data.store_name ? data.store_name.length:0}/24</small>
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@ const OpenStore = p =>{
                                         <input type="text" className="form-control" max="16" maxLength="16" value={data.store_url || ''} name="store_url" onChange={e => handleChange(e)} required/>
                                     </div>
                                 </div>
-                                <small className="label text-info float-right">{data.store_url && data.store_url.length}/16</small>
+                                <small className="label text-info float-right">{data.store_url ? data.store_url.length:0}/16</small>
                             </div>
                             <div className="form-group">
                                 <label>Kota atau Kecamatan</label>
