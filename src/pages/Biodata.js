@@ -33,6 +33,7 @@ const Biodata = p =>{
         let {name, gender, password} = data.form;
         if(name != '' && gender != '' && password != ''){
             localStorage.removeItem('isRegister');
+            setData({form: {name: '', gender: '', password: ''}})
             window.location.href = '/register/choose-community'
         }else{
             return false;
@@ -43,11 +44,8 @@ const Biodata = p =>{
         let target = e.target
         let value = target.value;
         let name = target.name;
-        console.log(value)
         setData({form: {...data.form, [name]: value}})
     }
-
-    console.log(data);
 
     return(
         <div className="container">
@@ -72,37 +70,39 @@ const Biodata = p =>{
                     <div className="label text-info">email@tokosultan.com</div>
 
                     <div className="text-left mb-3 card-body">
-                        <div className="form-group">
-                            <label className="label">Nama Lengkap</label>
-                            <input type="text" className="form-control" name="name" value={data.form.name || ''} onChange={(e) => handleChange(e)} required/>
-                        </div>
-                        <div className="form-group">
-                            <label className="label">Jenis Kelamin</label>
-                            <select className="form-control" value={data.form.gender || ''} name="gender" onChange={(e) => handleChange(e)} required>
-                                <option value=""></option>
-                                <option value="pria">Pria</option>
-                                <option value="wanita">Wanita</option>
-                            </select>
-                        </div>
-                        <div className="form-group">
-                            <label className="label">Kata Sandi</label>
-                            <div className="form-prepend">
-                                <div className="prepend">
-                                    <div className="valign">
-                                        <div className="inner">
-                                            <a href="#" onClick={(e) => displayPassword(e)}>
-                                                <img src={eyeoff} />
-                                            </a>
+                        <form onSubmit={() => onSubmit()}>
+                            <div className="form-group">
+                                <label className="label">Nama Lengkap</label>
+                                <input type="text" className="form-control" name="name" value={data.form.name || ''} onChange={(e) => handleChange(e)} required/>
+                            </div>
+                            <div className="form-group">
+                                <label className="label">Jenis Kelamin</label>
+                                <select className="form-control" value={data.form.gender || ''} name="gender" onChange={(e) => handleChange(e)} required>
+                                    <option value=""></option>
+                                    <option value="pria">Pria</option>
+                                    <option value="wanita">Wanita</option>
+                                </select>
+                            </div>
+                            <div className="form-group">
+                                <label className="label">Kata Sandi</label>
+                                <div className="form-prepend">
+                                    <div className="prepend">
+                                        <div className="valign">
+                                            <div className="inner">
+                                                <a href="#" onClick={(e) => displayPassword(e)}>
+                                                    <img src={eyeoff} />
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div>
+                                        <input type={hide ? "password":"text"} className="form-control mega-form-control" name="password" value={data.form.password || ''} onChange={(e) => handleChange(e)} required />
+                                    </div>
                                 </div>
-                                <div>
-                                    <input type={hide ? "password":"text"} className="form-control mega-form-control" name="password" value={data.form.password || ''} onChange={(e) => handleChange(e)} required />
-                                </div>
+                                <small className="label text-info">Minimum 8 karakter</small>
                             </div>
-                            <small className="label text-info">Minimum 8 karakter</small>
-                        </div>
-                        <button type="submit" className="btn-sultan btn-sultan-secondary" onClick={() => onSubmit()}>Daftar</button>
+                            <button type="submit" className="btn-sultan btn-sultan-secondary" onClick={() => onSubmit()}>Daftar</button>
+                        </form>
                     </div>
 
                     <div className="label text-info">Dengan mendaftar, saya menyetujui</div>
