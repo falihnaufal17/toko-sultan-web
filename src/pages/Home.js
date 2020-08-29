@@ -16,6 +16,7 @@ const SectionKomunitas = lazy(()=>import('../components/home/sectionKomunitas'))
 const SectionPromo = lazy(()=>import('../components/home/sectionPromo'));
 const SectionKategori = lazy(()=>import('../components/home/sectionKategori'));
 const SectionRekomendasi = lazy(()=>import('../components/home/sectionRekomendasi'));
+const FloatButtonChat = lazy(()=>import('../components/home/floatButtonChat'))
 
 const Home = p =>{
     const settings = {
@@ -206,6 +207,9 @@ const Home = p =>{
                     </div>
                     <SectionKategori kategori={kategori} />
                     <SectionRekomendasi rekomendasi={rekomendasi} />
+                </div>
+                <div className="d-none d-sm-block">
+                    <FloatButtonChat />
                 </div>
             </div>
         </Suspense>
