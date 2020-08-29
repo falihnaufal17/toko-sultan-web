@@ -11,7 +11,7 @@ import '../assets/styles/auth.scss';
 const ChooseCommunity = p =>{
 
     const [data, setData] = useState({
-        community: null
+        community_id: null
     })
 
     const komunitas = [
@@ -93,18 +93,14 @@ const ChooseCommunity = p =>{
     }
 
     const handleChange = e =>{
-        // let target = e.target;
-        // let value = target.value;
-        // let name = target
 
-        setData({community: e.target.value});
+        setData({community_id: e.target.value});
     }
 
     const onSubmit = () =>{
-        // let {community} = data;
 
-        if(data.community !== null){
-            setData({community: null})
+        if(data.community_id !== null){
+            setData({community_id: null})
             window.location.href = '/';
         }
     }
@@ -129,7 +125,7 @@ const ChooseCommunity = p =>{
                                                 <input type="radio" id={d.id} name="community_id" onChange={e => handleChange(e)} value={d.id} required/>
                                                 <div className="d-flex justify-content-center">
                                                     <div className="card-item">
-                                                        <label for={d.id}>
+                                                        <label htmlFor={d.id}>
                                                             <div className="valign">
                                                                 <div className="inner">
                                                                     <img src={d.image} alt={d.community_name} />
