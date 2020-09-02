@@ -205,3 +205,56 @@ input[type=tel]{
         padding-left: 15px;
     }
 }
+
+.filter-dropdown {
+	position: relative;
+	padding-top: 60px;
+	.filter{
+		.input-group{
+			.form-control{
+				padding-top: unset;
+			}
+		}
+		padding: 7px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+		z-index: 2;
+	}
+	.list-item{
+		padding: 10px 0;
+		overflow-x: hidden;
+		height: 132px;
+		position: relative;
+		z-index: 1;
+		.item{
+			position: relative;
+		}
+	}
+}
+.dropdown{
+    width: 100%;
+    .input-group{
+        .form-control{
+            padding-top: 5px;
+        }
+    }
+    cursor:pointer;
+    .dropdown-menu{
+        width: 100%;
+        max-height: 200px;
+        overflow-y: hidden;
+        .dropdown-item{
+            width: 100%;
+            color: black;
+        }		
+    }
+
+    .dropdown-toggle{
+        &::after{
+            display: none;
+        }
+    }
+}
