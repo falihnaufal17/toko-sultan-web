@@ -6,8 +6,21 @@ import BubleChatMobile from '../assets/images/mobile-buble-chat.png';
 import SearchMobile from '../assets/images/mobile-search.png';
 import Cart from '../assets/images/cart.png';
 import SearchBar from './SearchBar';
+import ProfilePict from '../assets/images/user-profile.png';
 
 const Navbar = props =>{
+    let authComp = (
+        <li className="nav-item">
+            <div className="row align-items-center">
+                <div className="col-auto">
+                    <img src={ProfilePict} alt="profile-pict" />
+                </div>
+                <div className="col">
+                    <a href="#" className="username">Nama User</a>
+                </div>
+            </div>
+        </li>
+    )
     return(
         <nav className="navbar fixed-top navbar-expand-lg">
             <div className="container-fluid">
@@ -50,6 +63,7 @@ const Navbar = props =>{
                                 </div>
                             </div>
                         </li>
+                        {/* {authComp} */}
                         <li className="nav-item">
                             <div className="valign">
                                 <div className="inner">
