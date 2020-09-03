@@ -32,8 +32,6 @@ const BottomNav = p =>{
         }
     ];
 
-    console.log(p);
-
     let urlPath = p.location.pathname;
 
     return(

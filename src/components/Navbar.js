@@ -7,6 +7,7 @@ import SearchMobile from '../assets/images/mobile-search.png';
 import Cart from '../assets/images/cart.png';
 import SearchBar from './SearchBar';
 import ProfilePict from '../assets/images/user-profile.png';
+import DropdownCart from './navbar/DropdownCart';
 
 const Navbar = props =>{
     let token = localStorage.getItem('token');
@@ -66,12 +67,13 @@ const Navbar = props =>{
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <SearchBar />
                         <ul className="navbar-nav">
-                            <li className="nav-item">
+                            <li className="nav-item dropdown">
                                 <div className="valign">
                                     <div className="inner">
-                                        <a href="#">
+                                        <a href="#" className="cart-icon" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <img src={Cart}/>
                                         </a>
+                                        <DropdownCart/>
                                     </div>
                                 </div>
                             </li>
