@@ -11,7 +11,7 @@ const SectionKomunitas = ({ komunitas }) =>{
                 {
                     komunitas.map((i, k)=>{
                         return (
-                            <div className="col-6 col-md-6 col-lg" key={k}>
+                            <div className="col-6 col-md-6 col-lg-auto" key={k}>
                                 <a href="#">
                                     <div className="card card-komunitas">
                                         <div className="row">

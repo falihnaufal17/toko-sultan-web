@@ -82,6 +82,10 @@ const Home = p =>{
         {
             image: mtr,
             name: '#Masyarakat Tanpa Riba'
+        },
+        {
+            image: pks,
+            name: 'PKS'
         }
     ]
 
