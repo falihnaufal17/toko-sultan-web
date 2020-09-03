@@ -40,6 +40,30 @@
         }
     }
 
+    .top-submenu{
+      position: absolute;
+      top: 0;
+      right: 30px;
+      display: flex;
+      flex-direction: row;
+      .item{
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 15px;
+        color: #527E03;
+        margin-right: 12px;
+      }
+    }
+
+    .navbar-nav{
+      .nav-item{
+        .nav-link{
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+      }
+    }
+
     .nav-link{
         @media screen and (max-width: 768px) {
             display: inline;
