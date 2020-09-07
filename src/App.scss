@@ -33,9 +33,69 @@
     }
 
     .dropdown-cart{
-      padding: 22px 54px;
+      width: 416px;
+      height: 457px;
+      padding: 16px;
       right: 0;
       left: unset;
+
+      .scrollable-menu {
+        height: auto;
+        max-height: 300px;
+        overflow-x: hidden;
+        margin-bottom: 25px;
+      }
+
+      .text-sultan-info{
+        @extend .text-sultan-secondary;
+        font-size: 13px !important;
+        line-height: 15px !important;
+        color: #BBB !important;
+      }
+
+      .card-item{
+        border: 1px solid #BBB;
+        padding: 17px 12px;
+        border-radius: 7px;
+        margin-bottom: 15px;
+
+        .text-subtitle{
+          margin-bottom: 10px;
+        }
+
+        .text-sultan-secondary{
+          font-size: 13px;
+          line-height: 15px;
+          margin-bottom: 21px;
+        }
+
+        .row-p{
+          margin: auto -15px;
+          > * {
+            padding: 0 15px;
+          }
+        }
+
+        .form-notes{
+          padding: 4.5px 5.5px;
+          border: none;
+          border-bottom: 1px solid #BBB;
+          font-size: 10px;
+          &:focus {
+            box-shadow: none;
+          }    
+        }
+
+        .form-qty{
+          text-align: center;
+        }
+
+        .btn-count{
+          text-align: center;
+          font-weight: bold;
+          border-radius: 8px;
+        }
+      }
 
       .username{
         font-weight: 400;
@@ -142,6 +202,10 @@
 
     &:hover{
       text-decoration: none;
+    }
+
+    &.btn-sultan-disabled{
+      background-color: #ADADAD !important;
     }
 
     &.btn-sultan-primary{
@@ -255,4 +319,44 @@
     line-height: 15px;
     color: #527E03;
   }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #FFF; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E0BC1E; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.text-title{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000;
+}
+
+.text-subtitle{
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 11px;
+  color: #000
+}
+
+.text-sultan-secondary{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: #527E03;
 }
