@@ -360,3 +360,36 @@
   line-height: 18px;
   color: #527E03;
 }
+
+.custom-file-input {
+  color: transparent;
+  opacity: 1 !important;
+  height: auto !important;
+  &::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  &::before {
+    content: 'Upload File';
+    color: black;
+    display: inline-block;
+    background: #DDD;
+    border-radius: 5px;
+    padding: 5px 28px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    &:hover{
+      border-color: black;
+    }
+    &:active{
+      outline: 0;
+      &::before{
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+      }
+    }
+  } 
+}

@@ -145,6 +145,18 @@ const OpenStore = p =>{
                                     </div>
                                 </div>
                                 <div className="form-group">
+                                    <label className="label" htmlFor="originalProduk">Original Produk</label>
+                                    <input type="file" className="custom-file-input" />
+                                </div>
+                                <div className="form-group">
+                                    <label className="label" htmlFor="originalProduk">Surat keterangan resmi distributor</label>
+                                    <input type="file" className="custom-file-input" />
+                                </div>
+                                <div className="form-group">
+                                    <label className="label" htmlFor="originalProduk">Keterangan tanda anggota komunitas / foto komunitas</label>
+                                    <input type="file" className="custom-file-input" />
+                                </div>
+                                <div className="form-group">
                                     <div className="row align-items-center">
                                         <div className="col-auto">
                                             <input type="checkbox" className="form-check" value="1" name="store_condition_terms" onChange={e => handleChange(e)} required/>
