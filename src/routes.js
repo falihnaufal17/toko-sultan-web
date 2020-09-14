@@ -8,6 +8,7 @@ const Verification = lazy(()=>import('./pages/Verification'));
 const Biodata = lazy(()=>import('./pages/Biodata'));
 const ChooseCommunity = lazy(()=>import('./pages/ChooseCommunity'));
 const OpenStore = lazy(()=>import('./pages/OpenStore'));
+const DetailProduct = lazy(()=>import('./pages/DetailProduct'));
 
 export default [
     {
@@ -43,6 +44,11 @@ export default [
     {
         path: '/open-store',
         component: OpenStore,
+        exact: true,
+    },
+    {
+        path: '/:store_slug/:product_slug',
+        component: DetailProduct,
         exact: true,
     },
     {

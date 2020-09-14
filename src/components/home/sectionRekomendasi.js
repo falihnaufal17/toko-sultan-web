@@ -20,6 +20,8 @@ const SectionRekomendasi = ({ rekomendasi }) => {
                                     location={i.location} 
                                     rating={i.rating}
                                     community={i.community}
+                                    store_slug={i.store_slug}
+                                    product_slug={i.product_slug}
                                 />
                             </div>
                         )

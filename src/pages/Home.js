@@ -99,7 +99,9 @@ const Home = p =>{
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
             rating: 20,
-            community: 'Lariba'
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
         },
         {
             image: mesinkopilarge,
@@ -108,7 +110,9 @@ const Home = p =>{
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
             rating: 20,
-            community: 'Lariba'
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
         },
         {
             image: mesinkopilarge,
@@ -117,7 +121,9 @@ const Home = p =>{
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
             rating: 20,
-            community: 'Lariba'
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
         },
         {
             image: mesinkopilarge,
@@ -126,7 +132,9 @@ const Home = p =>{
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
             rating: 20,
-            community: 'Lariba'
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
         },
         {
             image: mesinkopilarge,
@@ -135,7 +143,9 @@ const Home = p =>{
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
             rating: 20,
-            community: 'Lariba'
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
         },
         {
             image: mesinkopilarge,
@@ -144,7 +154,9 @@ const Home = p =>{
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
             rating: 20,
-            community: 'Lariba'
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
         },
         {
             image: mesinkopilarge,
@@ -153,7 +165,9 @@ const Home = p =>{
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
             rating: 20,
-            community: 'Lariba'
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
         },
         {
             image: mesinkopilarge,
@@ -162,7 +176,9 @@ const Home = p =>{
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
             rating: 20,
-            community: 'Lariba'
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
         },
         {
             image: mesinkopilarge,
@@ -171,7 +187,9 @@ const Home = p =>{
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
             rating: 20,
-            community: 'Lariba'
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
         },
         {
             image: mesinkopilarge,
@@ -180,7 +198,9 @@ const Home = p =>{
             string_price: 'Rp.3.500.000',
             location: 'Jakarta Selatan',
             rating: 20,
-            community: 'Lariba'
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
         },
     ]
 
