@@ -28,3 +28,10 @@ export const formatDate = (date) => {
 	let minutes = newDate.getMinutes()
 	return `${day}/${month}/${year} ${hours}:${minutes}`
 }
+
+export const onlyNumberKey = (evt) => {
+	let ASCIICODE = (evt.which) ? evt.which : evt.keyCode;
+	if (ASCIICODE > 31 && (ASCIICODE < 48 || ASCIICODE > 57))
+		return false;
+	return true;
+}
