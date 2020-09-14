@@ -236,6 +236,16 @@
         font-size: 13px;
       }
     }
+
+    &.btn-sultan-secondary-outline{
+      background-color: #FFF;
+      color: #527E03;
+      border: 1px solid #527E03;
+      &:hover{
+          color: #FFF;
+          background-color: #527E03;
+      }
+  }
 }
 
 .title-404{
