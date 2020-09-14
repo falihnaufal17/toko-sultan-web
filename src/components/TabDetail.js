@@ -1,7 +1,7 @@
 import React, {lazy, Suspense} from 'react';
 import share from '../assets/images/detail/share.png';
 
-// import '../assets/styles/home.scss';
+import '../assets/styles/home.scss';
 
 const SectionRekomendasi = lazy(()=>import('../components/home/sectionRekomendasi'));
 
@@ -11,7 +11,7 @@ const TabDetail = p =>{
             <div className="hline" />
             <div className="row">
                 <div className="col">
-                    <ul className="nav nav-tabs" id="myTab" role="tablist">
+                    <ul className="nav nav-tabs vertical-xs" id="myTab" role="tablist">
                         <li className="nav-item" role="presentation">
                             <a className="nav-link active" id="deskripsi-tab" data-toggle="tab" href="#deskripsi" role="tab" aria-controls="deskripsi" aria-selected="true">Deskripsi</a>
                         </li>
