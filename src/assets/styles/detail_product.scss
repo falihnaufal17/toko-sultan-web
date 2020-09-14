@@ -6,6 +6,9 @@
 
     .slick-slider{
         padding: 5px;
+        .slick-arrow{
+            display: block !important;
+        }
         .slick-prev{
             left: 10px;
             z-index: 1;
@@ -69,6 +72,9 @@
         width: 494px;
         border: 1px solid #BBB;
         border-radius: 13px;
+        @media screen and (max-width: 768px) {
+            width: unset;
+        }
     }
 
     .title{
@@ -164,9 +170,9 @@
     .btn-sultan{
         outline: none;
         &.btn-sultan-secondary{
-            padding: 5px;
             &.btn-count{
                 width: 32px;
+                padding: 5px;
         
                 img{
                     width: 100%;
@@ -178,6 +184,9 @@
     .form-control{
         outline: none !important;
         &.qty{
+            &:focus {
+                box-shadow: none;
+            }
             border: 1.5px solid #C8C8C8;
             background-color: #FFF;
             border-radius: 8px;
@@ -332,5 +341,33 @@
 }
 
 .float-button{
-    bottom: 18%;
+    bottom: 20%;
+}
+
+.form-box{
+    border: 1px solid #BFBFBF;
+    padding: 12px 15px;
+}
+
+.label{
+    color: #6F6F6F;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 22px;
+}
+
+textarea{
+    &.form-control{
+        &:focus {
+            box-shadow: none;
+        }
+        border: none;
+        border-bottom: 1px solid #BFBFBF;
+    }
+}
+
+label{
+    @extend .label;
+    color: #ADADAD;
 }

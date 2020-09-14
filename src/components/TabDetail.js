@@ -1,21 +1,25 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import share from '../assets/images/detail/share.png';
+
+// import '../assets/styles/home.scss';
+
+const SectionRekomendasi = lazy(()=>import('../components/home/sectionRekomendasi'));
 
 const TabDetail = p =>{
     return(
-        <>
+        <Suspense fallback={<div/>}>
             <div className="hline" />
             <div className="row">
                 <div className="col">
                     <ul className="nav nav-tabs" id="myTab" role="tablist">
                         <li className="nav-item" role="presentation">
-                            <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Deskripsi</a>
+                            <a className="nav-link active" id="deskripsi-tab" data-toggle="tab" href="#deskripsi" role="tab" aria-controls="deskripsi" aria-selected="true">Deskripsi</a>
                         </li>
                         <li className="nav-item" role="presentation">
-                            <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Ulasan (0)</a>
+                            <a className="nav-link" id="ulasan-tab" data-toggle="tab" href="#ulasan" role="tab" aria-controls="ulasan" aria-selected="false">Ulasan (0)</a>
                         </li>
                         <li className="nav-item" role="presentation">
-                            <a className="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Rekomendasi</a>
+                            <a className="nav-link" id="rekomendasi-tab" data-toggle="tab" href="#rekomendasi" role="tab" aria-controls="rekomendasi" aria-selected="false">Rekomendasi</a>
                         </li>
                     </ul>
                 </div>
@@ -30,26 +34,31 @@ const TabDetail = p =>{
             </div>
             <div className="hline"/>
             <div className="tab-content" id="myTabContent">
-                <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div className="tab-pane fade show active" id="deskripsi" role="tabpanel" aria-labelledby="deskripsi-tab">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do euismod tempor 
                     incididunt uit labore et dolors magna aluiqa. Dapibus ultricess in laculis nunc sed
                     alugue lacus. Quam nulla portitor massa id neque aliquam.Dapibus ultricess in laculis nunc sed Dapibus ultricess in laculis nunc sed alugue lacus. Quam nulla portitor massa id neque aliquam. Dapibus ultricess in laculis nunc sed
                     alugue lacus. Quam nulla portitor massa id neque aliquam. Dapibus ultricess in laculis nunc sed alugue lacus. Quam nulla portitor massa id neque aliquam.
                 </div>
-                <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do euismod tempor 
-                    incididunt uit labore et dolors magna aluiqa. Dapibus ultricess in laculis nunc sed
-                    alugue lacus. Quam nulla portitor massa id neque aliquam.Dapibus ultricess in laculis nunc sed Dapibus ultricess in laculis nunc sed alugue lacus. Quam nulla portitor massa id neque aliquam. Dapibus ultricess in laculis nunc sed
-                    alugue lacus. Quam nulla portitor massa id neque aliquam. Dapibus ultricess in laculis nunc sed alugue lacus. Quam nulla portitor massa id neque aliquam.
+                <div className="tab-pane fade" id="ulasan" role="tabpanel" aria-labelledby="ulasan-tab">
+                    <div className="label">Belum ada ulasan</div>
+                    <form>
+                        <div className="form-box">
+                            <div className="form-group">
+                                <label>Tulis sesuatu yang ingin anda tanyakan...</label>
+                                <textarea className="form-control" rows={3}></textarea>
+                            </div>
+                            <div className="d-flex justify-content-end">
+                                <button type="submit" className="btn-sultan btn-sultan-secondary">Kirim</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do euismod tempor 
-                    incididunt uit labore et dolors magna aluiqa. Dapibus ultricess in laculis nunc sed
-                    alugue lacus. Quam nulla portitor massa id neque aliquam.Dapibus ultricess in laculis nunc sed Dapibus ultricess in laculis nunc sed alugue lacus. Quam nulla portitor massa id neque aliquam. Dapibus ultricess in laculis nunc sed
-                    alugue lacus. Quam nulla portitor massa id neque aliquam. Dapibus ultricess in laculis nunc sed alugue lacus. Quam nulla portitor massa id neque aliquam.
+                <div className="tab-pane fade" id="rekomendasi" role="tabpanel" aria-labelledby="rekomendasi-tab">
+                    <SectionRekomendasi rekomendasi={p.rekomendasi} />
                 </div>
             </div>
-        </>
+        </Suspense>
     )
 }
 

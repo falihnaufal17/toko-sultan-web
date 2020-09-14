@@ -7,6 +7,7 @@ import XBank from '../assets/images/XBank.png';
 import Delivery from '../assets/images/detail/Delivery.png';
 import minus from '../assets/images/minus.png';
 import plus from '../assets/images/plus.png';
+import mesinkopilarge from '../assets/images/product-large.png';
 
 import { priceDecimal } from '../assets/helper';
 
@@ -22,10 +23,149 @@ const DetailProduct = p =>{
         infinite: false,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
 
-    const [qty, setQty] = useState(1)
+    const [qty, setQty] = useState(1);
+
+    const rekomendasi = [
+        {
+            image: mesinkopilarge,
+            product_name: 'Etrolux Automatic Coffee',
+            price: 3500000,
+            string_price: 'Rp.3.500.000',
+            location: 'Jakarta Selatan',
+            rating: 20,
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
+        },
+        {
+            image: mesinkopilarge,
+            product_name: 'Etrolux Automatic Coffee',
+            price: 3500000,
+            string_price: 'Rp.3.500.000',
+            location: 'Jakarta Selatan',
+            rating: 20,
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
+        },
+        {
+            image: mesinkopilarge,
+            product_name: 'Etrolux Automatic Coffee',
+            price: 3500000,
+            string_price: 'Rp.3.500.000',
+            location: 'Jakarta Selatan',
+            rating: 20,
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
+        },
+        {
+            image: mesinkopilarge,
+            product_name: 'Etrolux Automatic Coffee',
+            price: 3500000,
+            string_price: 'Rp.3.500.000',
+            location: 'Jakarta Selatan',
+            rating: 20,
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
+        },
+        {
+            image: mesinkopilarge,
+            product_name: 'Etrolux Automatic Coffee',
+            price: 3500000,
+            string_price: 'Rp.3.500.000',
+            location: 'Jakarta Selatan',
+            rating: 20,
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
+        },
+        {
+            image: mesinkopilarge,
+            product_name: 'Etrolux Automatic Coffee',
+            price: 3500000,
+            string_price: 'Rp.3.500.000',
+            location: 'Jakarta Selatan',
+            rating: 20,
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
+        },
+        {
+            image: mesinkopilarge,
+            product_name: 'Etrolux Automatic Coffee',
+            price: 3500000,
+            string_price: 'Rp.3.500.000',
+            location: 'Jakarta Selatan',
+            rating: 20,
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
+        },
+        {
+            image: mesinkopilarge,
+            product_name: 'Etrolux Automatic Coffee',
+            price: 3500000,
+            string_price: 'Rp.3.500.000',
+            location: 'Jakarta Selatan',
+            rating: 20,
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
+        },
+        {
+            image: mesinkopilarge,
+            product_name: 'Etrolux Automatic Coffee',
+            price: 3500000,
+            string_price: 'Rp.3.500.000',
+            location: 'Jakarta Selatan',
+            rating: 20,
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
+        },
+        {
+            image: mesinkopilarge,
+            product_name: 'Etrolux Automatic Coffee',
+            price: 3500000,
+            string_price: 'Rp.3.500.000',
+            location: 'Jakarta Selatan',
+            rating: 20,
+            community: 'Lariba',
+            store_slug: 'uhe-store',
+            product_slug: 'etrolux-automatic-coffee'
+        },
+    ]
 
     return(
         <Suspense fallback={<div/>}>
@@ -34,9 +174,15 @@ const DetailProduct = p =>{
                     <div className="col">
                         <div className="w-494">
                             <Slider {...settings}>
-                                    <img src={Product} alt="banner" />
-                                    <img src={Product} alt="banner" />
-                                    <img src={Product} alt="banner" />
+                                <div>
+                                    <img src={Product} className="d-block w-100" alt="banner" />
+                                    </div>
+                                    <div>
+                                    <img src={Product} className="d-block w-100" alt="banner" />
+                                    </div>
+                                    <div>
+                                    <img src={Product} className="d-block w-100" alt="banner" />
+                                    </div>
                             </Slider>
                         </div>
                     </div>
@@ -108,7 +254,7 @@ const DetailProduct = p =>{
                         </a>
                     </div>
                 </div>
-                <TabDetail {...p}/>
+                <TabDetail {...p} rekomendasi={rekomendasi} />
             </div>
             <FloatButtonChat {...p}/>
             <BottomNavDetail {...p} priceDecimal={priceDecimal}/>
