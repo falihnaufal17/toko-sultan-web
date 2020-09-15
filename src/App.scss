@@ -299,6 +299,9 @@
   position: fixed;
   right: 35px;
   bottom: 35px;
+  &::after{
+    display: none !important;
+  }
   .float-content{
     display: flex;
     flex-direction: row;
