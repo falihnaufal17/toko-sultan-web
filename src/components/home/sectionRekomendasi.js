@@ -2,10 +2,12 @@ import React from 'react';
 import seemore from '../../assets/images/see more.png';
 import ProductLists from '../../components/ProductLists';
 
-const SectionRekomendasi = ({ rekomendasi }) => {
+const SectionRekomendasi = ({ rekomendasi, p }) => {
+    let objParams = p.match.params;
+
     return(
         <div id="section-rekomendasi">
-            <div className="title-section">
+            <div className={Object.keys(objParams).length == 0 ? "d-block title-section" : "d-none"}>
                 <h2 className="title">Rekomendasi</h2>
             </div>
             <div className="row row-p">

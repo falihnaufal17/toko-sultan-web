@@ -230,7 +230,7 @@ const Home = p =>{
                         <SectionPromo tokoresmi={tokoresmi} promosultan={promosultan} />
                     </div>
                     <SectionKategori kategori={kategori} />
-                    <SectionRekomendasi rekomendasi={rekomendasi} />
+                    <SectionRekomendasi p={p} rekomendasi={rekomendasi} />
                 </div>
                 <div className="d-none d-sm-block">
                     <FloatButtonChat />

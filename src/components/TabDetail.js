@@ -55,7 +55,7 @@ const TabDetail = p =>{
                     </form>
                 </div>
                 <div className="tab-pane fade" id="rekomendasi" role="tabpanel" aria-labelledby="rekomendasi-tab">
-                    <SectionRekomendasi rekomendasi={p.rekomendasi} />
+                    <SectionRekomendasi p={p} rekomendasi={p.rekomendasi} />
                 </div>
             </div>
         </Suspense>

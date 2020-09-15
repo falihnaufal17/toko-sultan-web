@@ -74,6 +74,7 @@
         border-radius: 13px;
         @media screen and (max-width: 768px) {
             width: unset;
+            border: none;
         }
     }
 
@@ -370,4 +371,13 @@ textarea{
 label{
     @extend .label;
     color: #ADADAD;
+}
+
+.row-bottom-nav{
+    @media screen and (max-width: 768px) {
+        margin: auto -5px;
+        >*{
+            padding: 0 5px
+        }
+    }
 }

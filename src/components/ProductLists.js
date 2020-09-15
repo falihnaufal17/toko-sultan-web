@@ -4,7 +4,7 @@ import staroff from '../assets/images/star-off.png'
 
 const ProductLists = ({image, product_name, string_price, location, rating, community, product_slug, store_slug}) =>{
     return(
-        <a href={store_slug + '/' + product_slug}>
+        <a href={'/' + store_slug + '/' + product_slug}>
             <div className="card card-product">
                 <div className="image">
                     <img src={image} />

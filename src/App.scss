@@ -422,8 +422,7 @@
     padding: 0 15px !important;
     
     &::-webkit-scrollbar {
-      height: 2px;
-      margin-bottom: 10px;
+      display: none;
     }
 
 		> * {
