@@ -8,7 +8,7 @@ const BottomDetailNav = p =>{
     return(
         <nav className="navbar fixed-bottom bottom-nav">
             <div className="container-fluid">
-                <div className="row align-items-center d-none d-sm-block">
+                <div className="row align-items-center d-none d-sm-flex">
                     <div className="col-auto">
                         <div className="position-relative">
                             <img src={UserProfile} alt="user" />
