@@ -3,6 +3,7 @@
 <center>
 <img src="./outputs/homepage.png" width="50%" alt="Homepage" />
 </center>
+<br>
 This is a Toko Sulta Web application that demonstrates the basics of building a single-page app using React, JSX, and React Router.
 
 ## Prerequisites
